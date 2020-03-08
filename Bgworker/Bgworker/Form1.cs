@@ -15,11 +15,17 @@ namespace Bgworker
     {
         Bitmap obrazek;
         int r = 0, g = 0, b = 0;
+        private BackgroundWorker backgroundWorker = null;
 
         private void button1_Click(object sender, EventArgs e)
         {
             openFileDialog1.ShowDialog();
             pictureBox1.Image = new Bitmap(openFileDialog1.FileName);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image.Save(@"C:\Users\Sebastian\Desktop\Nowy folder (7)\fotolia2.jpeg");
         }
 
         public Form1()
